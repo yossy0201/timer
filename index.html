@@ -29,8 +29,11 @@
     var now = new Date();
     var seconds = now.getSeconds();//秒を取得
 
+    if (seconds < 10) {
+      seconds = '0' + seconds;
 
-    seconds = '0' + seconds;
+    }
+
 
     document.getElementById('timer').innerHTML = seconds;
   </script>
