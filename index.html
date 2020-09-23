@@ -15,13 +15,24 @@
 </head>
 <body>
   <div class="container">
-    <script>
-      document.write('<p id="timer">00:00:00</p>');
-    </script>
    
+    <p id="timer">00:00:00</p>
+
+
+
     <div>
       <button id="start_stop" class="btn btn-lg btn-primary">START</button>
     </div>
   </div>
+  
+  <script>
+    var now = new Date();
+    var seconds = now.getSeconds();//秒を取得
+
+
+    seconds = '0' + seconds;
+
+    document.getElementById('timer').innerHTML = seconds;
+  </script>
 </body>
 </html>
