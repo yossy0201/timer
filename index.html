@@ -34,23 +34,24 @@
 
       return value;
     }
-    
-    var now = new Date();
-    var seconds = now.getSeconds();//秒を取得
-    seconds = addZero(seconds);
 
-    var minutes = now.getMinutes();//分
+    document.getElementById('start_stop').addEventListener('click',
+    function() {
 
-    if (minutes < 10) {
-      minutes = '0' + minutes;
-    }
+   
+      var now = new Date();
+      var seconds = now.getSeconds();//秒を取得
+      seconds = addZero(seconds);
 
-    var hours = now.getHours();//時
-    if (hours < 10) {
-      hours = '0' + hours;
-    }
+      var minutes = now.getMinutes();//分
+      minutes = addZero(minutes);
 
-    document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds; 
+      var hours = now.getHours();//時
+        hours = addZero(hours);
+      
+
+      document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds; 
+    });
   </script>
 </body>
 </html>
