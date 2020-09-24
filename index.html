@@ -26,13 +26,21 @@
   </div>
   
   <script>
-    var now = new Date();
+    //ゼロを追加する
+    var addZero = function(value) {
+      if (value < 10) {
+        value = '0' + value;
+      }
 
-    var seconds = now.getSeconds();//秒を取得
-    if (seconds < 10) {
-      seconds = '0' + seconds;
+      return value;
     }
+    
+    var now = new Date();
+    var seconds = now.getSeconds();//秒を取得
+    seconds = addZero(seconds);
+
     var minutes = now.getMinutes();//分
+
     if (minutes < 10) {
       minutes = '0' + minutes;
     }
