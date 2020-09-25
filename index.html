@@ -35,8 +35,10 @@
       return value;
     }
 
-    document.getElementById('start_stop').addEventListener('click',function() {
-      var start = new Date();
+    goTimer
+    document.getElementById('start_stop').addEventListener
+    ('click',function() {
+       start = new Date();
 
       setInterval(goTimer, 10);
     });
@@ -44,8 +46,11 @@
     var goTimer = function() {
       var now = new Date();
 
-      document.getElementById('timer').innerHTML = 
-      now.getTime();
+      var milli = now.getTime() - start.getTime();
+      var seconds = Math.floor(milli / 1000);
+      var minutes = Math.floor(seconds / 60);
+
+      document.getElementById('timer').innerHTML = seconds;
 
     }
   </script>
