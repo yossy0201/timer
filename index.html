@@ -35,23 +35,19 @@
       return value;
     }
 
-    document.getElementById('start_stop').addEventListener('click',
-    function() {
+    document.getElementById('start_stop').addEventListener('click',function() {
+      var start = new Date();
 
-   
-      var now = new Date();
-      var seconds = now.getSeconds();//秒を取得
-      seconds = addZero(seconds);
-
-      var minutes = now.getMinutes();//分
-      minutes = addZero(minutes);
-
-      var hours = now.getHours();//時
-        hours = addZero(hours);
-      
-
-      document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds; 
+      setInterval(goTimer, 10);
     });
+
+    var goTimer = function() {
+      var now = new Date();
+
+      document.getElementById('timer').innerHTML = 
+      now.getTime();
+
+    }
   </script>
 </body>
 </html>
