@@ -43,14 +43,30 @@
       setInterval(goTimer, 10);
     });
 
+    var addZero = function(value) {
+      if (value < 10) {
+        value = '0' + value;
+      }
+      return value;
+    }
+
     var goTimer = function() {
       var now = new Date();
 
-      var milli = now.getTime() - start.getTime();
+      var milli   = now.getTime() - start.getTime();
       var seconds = Math.floor(milli / 1000);
       var minutes = Math.floor(seconds / 60);
+      var hours   = Math.floor(minutes / 60);
 
-      document.getElementById('timer').innerHTML = seconds;
+      seconds = seconds - minutes * 60;
+      minutes = minutes - hours * 60;
+
+      hours = addZero(hours);
+      minutes = addZero(minutes);
+      seconds = addZero(seconds);
+
+      document.getElementById('timer').innerHTML = hours +
+      ':' + minutes + ':' + seconds;
 
     }
   </script>
