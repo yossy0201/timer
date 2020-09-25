@@ -26,16 +26,9 @@
   </div>
   
   <script>
-    //ゼロを追加する
-    var addZero = function(value) {
-      if (value < 10) {
-        value = '0' + value;
-      }
+    var start;
 
-      return value;
-    }
 
-    goTimer
     document.getElementById('start_stop').addEventListener
     ('click',function() {
        start = new Date();
