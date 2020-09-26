@@ -10,7 +10,7 @@
  
 # 詳細　details
 
-* タイマーアプリを開発しました。このサイトを通しtえ、時間の計測ができます。
+* タイマーアプリを開発しました。このサイトを通して、時間の計測ができます。
  
 # 魅力が直感的に伝えわるデモ動画や図解　Demo videos and illustrations that intuitively convey the charm
 
